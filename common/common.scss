@@ -495,7 +495,7 @@ body {
   .topic-list .main-link {
     max-width: 758px;
     .link-middle-line {
-      img {
+      .topic-image, img {
         display: none;
       }
     }
