@@ -92,7 +92,11 @@
       }
 
       .discourse-tags {
-        margin: .5em 0 1em 0;
+        margin: 0 0 1em 0;
+      }
+
+      .topic-image + .discourse-tags {
+        margin-top: 1em;
       }
 
       .topic-image {
