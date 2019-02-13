@@ -89,11 +89,16 @@
           text-decoration: underline;
         }
       }
+
+      .topic-image {
+        max-height: 350px;
+        overflow-y: hidden;
+        width: calc(100% + 2em);
+        margin: .25em -1em;
+      }
       img {
         display: block;
-        width: calc(100% + 2em);
         height: auto;
-        margin: .25em -1em;
         &.emoji {
           width: 20px;
           height: 20px;
