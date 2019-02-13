@@ -85,6 +85,7 @@
         font-size: 22px;
         color: $tertiary;
         line-height: 1.3;
+        margin-bottom: 1em;
         &:hover {
           text-decoration: underline;
         }
@@ -98,7 +99,7 @@
         max-height: 350px;
         overflow-y: hidden;
         width: calc(100% + 2em);
-        margin: .25em -1em;
+        margin: .25em -1em 0 -1em;
       }
       img {
         display: block;
