@@ -1,5 +1,8 @@
 @import "common/foundation/variables";
 
+$border-color: #dddfe2;
+
+
 #main-outlet {
   padding-top: 4em;
 }
@@ -64,6 +67,10 @@
         font-size: $font-down-2;
         font-weight: normal;
         margin-top: 1px;
+
+        .d-icon {
+          color: currentColor;
+        }
         
       }
       .badge-wrapper.bullet {
@@ -114,6 +121,7 @@
         display: block;
         width: 100%;
         height: auto;
+       
         &.emoji {
           width: 20px;
           height: 20px;
@@ -121,6 +129,11 @@
           display: inline-block;
           vertical-align: baseline;
         }
+      }
+
+      img[src$=".ico"],
+      img[src*="favicon"] {
+        display: none !important;
       }
       
       .discourse-tags {
@@ -217,11 +230,16 @@
   background: #e9ebee;
 }
 
+.small-action {
+  margin-bottom: 1em;
+}
+
 .small-action .topic-avatar {
   margin-right: 0;
   padding: 1em 0 1em .75em;
   font-size: 1em;
-  height: 26px;
+  min-height: 26px;
+  align-self: stretch;
   border-top: 1px solid $primary-low;
   .d-icon {
     height: 23px;
@@ -244,6 +262,27 @@
   .topic-avatar {
     display: none;
   }
+}
+
+.embedded-posts {
+  .topic-avatar, 
+  .topic-body {
+    border-top: 1px solid $border-color;
+  }
+}
+
+.read-state {
+  right: 10px;
+}
+
+.tag-drop-row {
+  font-weight: normal !important;
+  font-size: .875em;
+}
+
+.presence-users {
+  background: transparent;
+  margin-bottom: 1em;
 }
 
 // User 

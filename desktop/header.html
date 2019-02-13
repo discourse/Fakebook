@@ -48,12 +48,12 @@
 
 <script type='text/x-handlebars' data-template-name='/connectors/discovery-below/sidebar'>
   <div class="dbook-sidebar">
-    {{#if themeSettings.sidebar_show_intro}}
+    {{#if (theme-setting "sidebar_show_intro")}}
     <h2>🤗 {{i18n (theme-prefix "sidebar.welcome")}} {{#if userName}}{{i18n (theme-prefix "sidebar.back")}} {{userName}} {{/if}} </h2>
     <p>{{i18n (theme-prefix "sidebar.welcome_subhead")}}</p>
     {{/if}}
-    
-    {{#if themeSettings.sidebar_show_likes}}
+
+    {{#if (theme-setting "sidebar_show_likes")}}
     {{#if userLikesGiven}}
     <div class="likes">  
       <h3>{{i18n (theme-prefix "sidebar.likes_header")}}</h3>
@@ -63,7 +63,7 @@
     {{/if}}
     {{/if}}
     
-    {{#if themeSettings.sidebar_show_badges}}
+    {{#if (theme-setting "sidebar_show_badges")}}
     {{#if stinkinBadges}}
     <div class="badges">
       <h3>{{i18n (theme-prefix "sidebar.badges_header")}}</h3>
