@@ -543,6 +543,11 @@ body {
 }
 
 // User 
+
+.user-main .about {
+  border-radius: 4px;
+}
+
 .user-main .about .details {
   padding: 1em;
   border: 1px solid $primary-low;

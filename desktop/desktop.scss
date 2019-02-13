@@ -89,18 +89,23 @@
           text-decoration: underline;
         }
       }
-      img {
+      .topic-image {
         display: block;
         width: calc(100% + 2em);
-        height: auto;
+        height: 360px;
         margin: .25em -1em;
-        &.emoji {
+        height: 100px;
+        background-size: cover;
+        background-repeat: no-repeat;
+     
+      }
+
+      img.emoji {
           width: 20px;
           height: 20px;
           margin: 0;
           display: inline-block;
           vertical-align: baseline;
-        }
       }
       
       .discourse-tags {
@@ -131,6 +136,7 @@
         color: $primary-medium;
         &.likes .d-icon {
           color: $love;
+          margin-top: -1px;
         }
         .d-icon {
           margin-left: .25em;
