@@ -79,7 +79,7 @@
     
     .link-middle-line {
       border-bottom: 1px solid  #dddfe2;
-      padding: .5em 1em 1em 1em ;
+      padding: .5em 1em 0 1em ;
       
       .topic-title {
         font-size: 22px;
@@ -88,6 +88,10 @@
         &:hover {
           text-decoration: underline;
         }
+      }
+
+      .discourse-tags {
+        margin: 1em 0;
       }
 
       .topic-image {
