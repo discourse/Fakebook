@@ -532,6 +532,10 @@ body {
   }
 }
 
+.extra-info-wrapper .badge-wrapper.bullet {
+  padding-top: 0;
+}
+
 .extra-info-wrapper .topic-header-extra .discourse-tags {
   a { color: $header_primary !important;}
 }
