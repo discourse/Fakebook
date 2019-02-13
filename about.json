@@ -1,7 +1,7 @@
 {
   "name": "Fakebook",
-  "about_url": null,
-  "license_url": null,
+  "about_url": "https://github.com/awesomerobot/Fakebook/tree/master",
+  "license_url": "https://github.com/awesomerobot/Fakebook/blob/master/LICENSE",
   "assets": {
   },
   "color_schemes": {

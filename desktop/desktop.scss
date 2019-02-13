@@ -94,6 +94,10 @@
         width: calc(100% + 2em);
         height: auto;
         margin: .25em -1em;
+        &.emoji {
+          width: 20px;
+          height: 20px;
+        }
       }
       
       .discourse-tags {
