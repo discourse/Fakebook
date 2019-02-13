@@ -89,23 +89,18 @@
           text-decoration: underline;
         }
       }
-      .topic-image {
+      img {
         display: block;
         width: calc(100% + 2em);
-        height: 360px;
+        height: auto;
         margin: .25em -1em;
-        height: 100px;
-        background-size: cover;
-        background-repeat: no-repeat;
-     
-      }
-
-      img.emoji {
+        &.emoji {
           width: 20px;
           height: 20px;
           margin: 0;
           display: inline-block;
           vertical-align: baseline;
+        }
       }
       
       .discourse-tags {
