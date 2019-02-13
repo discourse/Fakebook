@@ -39,6 +39,9 @@
           {{~#if topic.featured_link}}
           {{~topic-featured-link topic}}
           {{~/if}}
+          {{~#if showTopicPostBadges}}
+          {{~raw "topic-post-badges" unread=topic.unread newPosts=topic.displayNewPosts unseen=topic.unseen url=topic.lastUnreadUrl newDotText=newDotText}}
+          {{~/if}}
         </div>
         
         {{~raw-plugin-outlet name="topic-list-after-title"}}
@@ -54,9 +57,7 @@
         {{/if}}
         {{discourse-tags topic mode="list" tagsForUser=tagsForUser}}
         
-        {{~#if showTopicPostBadges}}
-        {{~raw "topic-post-badges" unread=topic.unread newPosts=topic.displayNewPosts unseen=topic.unseen url=topic.lastUnreadUrl newDotText=newDotText}}
-        {{~/if}}
+   
       </span>
       
     </div>
