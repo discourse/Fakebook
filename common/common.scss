@@ -10,6 +10,7 @@ $header-border: #29487d;
 @media screen and (min-width: 650px) {
   .navigation-topics,
   .categories-list,
+  .tags-page,
   body[class*="category-"]:not(.archetype-regular):not(.archetype-banner) { 
     
     // Structuring the main grid layout 
