@@ -1,0 +1,61 @@
+@import "common/foundation/variables";
+
+body {
+  background: $secondary;
+}
+
+.topic-list {
+  table-layout: auto;
+}
+
+#main-outlet {
+  padding-top: 3em;
+}
+
+tr {
+  border-color: $tertiary-low;
+}
+
+.extra-info-wrapper h1 {
+  margin: 0;
+}
+
+.mobile-view .mobile-nav {
+  background: transparent;
+  border: 1px solid $primary-low;
+  border-radius: 4px;
+}
+
+.list-controls .nav-pills>li {
+  border-color: $primary-low-mid;
+  border-radius: 4px;
+}
+
+.select-kit.combo-box .select-kit-header {
+  border-color: $primary-low-mid;
+  border-radius: 4px;
+}
+
+.period-chooser-header {
+  .selected-name {
+    font-size: 1.25em;
+  }
+}
+
+.select-kit.dropdown-select-box.period-chooser .period-chooser-header .d-icon {
+  margin-top: 0;
+}
+
+.groups-header-filters {
+  display: block;
+  margin-top: 1em;
+}
+
+.groups-header-filters-type {
+  margin-top: 1em;
+}
+// User
+
+.user-main .about {
+  background: transparent;
+}

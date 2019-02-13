@@ -1,0 +1,21 @@
+{
+  "name": "Fakebook",
+  "about_url": null,
+  "license_url": null,
+  "assets": {
+  },
+  "color_schemes": {
+    "Fakebook": {
+      "primary": "333",
+      "secondary": "ffffff",
+      "tertiary": "4267b2",
+      "quaternary": "4267b2",
+      "header_background": "4267b2",
+      "header_primary": "ffffff",
+      "highlight": "4267b2",
+      "danger": "f8745c",
+      "success": "42b72a",
+      "love": "fa6c8d"
+    }
+  }
+}

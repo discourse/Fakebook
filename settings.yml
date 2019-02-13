@@ -1,0 +1,18 @@
+sidebar_alignment: 
+  type: enum
+  default: left
+  choices: 
+    - right
+    - left
+
+sidebar_show_intro: 
+   type: bool 
+   default: true
+
+sidebar_show_likes:
+   type: bool 
+   default: true
+
+sidebar_show_badges: 
+   type: bool 
+   default: true
