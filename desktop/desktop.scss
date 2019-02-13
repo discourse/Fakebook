@@ -92,7 +92,7 @@
       }
 
       .discourse-tags {
-        margin: 1em 0;
+        margin: .5em 0 1em 0;
       }
 
       .topic-image {
@@ -124,14 +124,21 @@
       .topic-excerpt {
         font-size: 14px;
         color: $primary;
+        margin: 0 0 1em 0;
         .emoji {
-          width: 20px;
-          height: 20px;
+          width: 15px;
+          height: 15px;
           display: inline-block;
           margin: 0;
         }
       }
       
+    }
+
+    #link-middle-line-excerpt {
+      .topic-title {
+        margin-bottom: .25em;
+      }
     }
     
     .link-bottom-line {

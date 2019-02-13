@@ -32,7 +32,7 @@
         {{/unless}}
         
       </div>
-      <div class="link-middle-line">
+      <div class="link-middle-line" id='{{#if topic.hasExcerpt}}link-middle-line-excerpt{{/if}}' >
         <div class="topic-title">
           {{~raw "topic-status" topic=topic}}
           {{~topic-link topic class="raw-link raw-topic-link"}}
