@@ -5,7 +5,7 @@ body {
 }
 
 .topic-list {
-  table-layout: auto;
+  table-layout: auto !important;
 }
 
 #main-outlet {
