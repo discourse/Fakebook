@@ -2,196 +2,27 @@
 
 $border-color: #dddfe2;
 
-
 #main-outlet {
   padding-top: 4em;
 }
-
 
 .d-header {
   height: 42px;
 }
 
-// topic list 
+// User
+
+.user-table {
+  padding: 1em;
+  background: $secondary;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
 
 .boxed .row {
   display: flex;
   margin-bottom: 1em;
 }
-
-
-.topic-list {
-  tbody {
-    border: none;
-  }
-  
-  tr {
-    border: none;
-  }
-  
-  .topic-list-item-separator {
-    td {
-      display: block;
-      width: 486px;
-      margin-bottom: 1em;
-    }
-  }
-  
-  .main-link {
-    background: white;
-    border: 1px solid #dddfe2;
-    border-radius: 4px;
-    margin-bottom: 12px;
-    
-    .byline {
-      display: flex;
-      padding: .75em 1em .5em 1em ;
-      img.avatar {
-        margin: 3px 8px 0 0;
-      }
-      .author  {
-        margin-right: auto;
-        font-size: .813em;
-        .username {
-          font-weight: bold;
-        }
-        .relative-date {
-          font-size: .85em;
-          color: $primary-medium;
-        }
-        a {
-          display: flex;
-        }
-      }
-      .badge-wrapper {
-        font-size: $font-down-2;
-        font-weight: normal;
-        margin-top: 1px;
-
-        .d-icon {
-          color: currentColor;
-        }
-        
-      }
-      .badge-wrapper.bullet {
-        margin-right: 0;
-        margin-left: 8px;
-      }
-      .name-and-date {
-        span {
-          display: block;
-        }
-      }
-    }
-    
-    .link-middle-line {
-      border-bottom: 1px solid  #dddfe2;
-      padding: .5em 1em 0 1em ;
-      
-      .topic-title {
-        font-size: 22px;
-        color: $tertiary;
-        line-height: 1.3;
-        margin-top: .25em;
-        margin-bottom: 1em;
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-
-      .discourse-tags {
-        margin: 0 0 1em 0;
-      }
-
-      .topic-image + .discourse-tags {
-        margin-top: 1em;
-      }
-
-      .topic-title + .discourse-tags {
-        margin-top: -1em;
-      }
-
-      .topic-image {
-        max-height: 350px;
-        overflow-y: hidden;
-        width: calc(100% + 2em);
-        margin: .25em -1em 0 -1em;
-      }
-      img {
-        display: block;
-        width: 100%;
-        height: auto;
-       
-        &.emoji {
-          width: 20px;
-          height: 20px;
-          margin: 0;
-          display: inline-block;
-          vertical-align: baseline;
-        }
-      }
-
-      img[src$=".ico"],
-      img[src*="favicon"] {
-        display: none !important;
-      }
-      
-      .discourse-tags {
-        display: block;
-        a {
-          font-size: $font-down-1;
-        }
-      }
-      
-      .topic-excerpt {
-        font-size: 14px;
-        color: $primary;
-        margin: 0 0 1em 0;
-        .emoji {
-          width: 15px;
-          height: 15px;
-          display: inline-block;
-          margin: 0;
-        }
-      }
-      
-    }
-
-    #link-middle-line-excerpt {
-      .topic-title {
-        margin-bottom: .25em;
-      }
-    }
-    
-    .link-bottom-line {
-      a {
-        font-size: $font-down-1;
-        display: flex;
-        align-items: center;
-        color: $primary-medium;
-        &.likes .d-icon {
-          color: $love;
-          margin-top: -1px;
-        }
-        .d-icon {
-          margin-left: .25em;
-        }
-      }
-      padding: .6em 1em .6em 1em ;
-      .badge-posts {
-        margin-left: auto;
-      }
-    }
-  }
-  
-  
-  
-  
-  
-  
-  
-}
-
 
 // Topic
 
@@ -209,7 +40,6 @@ $border-color: #dddfe2;
   }
   @media screen and (max-width: 775px) {
     width: calc(100% - 60px);
-    
   }
 }
 
@@ -236,7 +66,7 @@ $border-color: #dddfe2;
 
 .small-action .topic-avatar {
   margin-right: 0;
-  padding: 1em 0 1em .75em;
+  padding: 1em 0 1em 0.75em;
   font-size: 1em;
   min-height: 26px;
   align-self: stretch;
@@ -254,8 +84,8 @@ $border-color: #dddfe2;
   background: $secondary;
 }
 
-.time-gap.small-action{
-  .small-action-desc  {
+.time-gap.small-action {
+  .small-action-desc {
     background: transparent;
     border: none;
   }
@@ -265,7 +95,7 @@ $border-color: #dddfe2;
 }
 
 .embedded-posts {
-  .topic-avatar, 
+  .topic-avatar,
   .topic-body {
     border-top: 1px solid $border-color;
   }
@@ -277,20 +107,10 @@ $border-color: #dddfe2;
 
 .tag-drop-row {
   font-weight: normal !important;
-  font-size: .875em;
+  font-size: 0.875em;
 }
 
 .presence-users {
   background: transparent;
   margin-bottom: 1em;
-}
-
-// User 
-
-
-.user-table {
-  padding: 1em;
-  background: $secondary;
-  box-sizing: border-box;
-  border-radius: 4px;
 }

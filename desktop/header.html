@@ -1,31 +1,19 @@
-
-<!-- Restrcture post count -->
-
-<script type='text/x-handlebars' data-template-name='list/posts-count-column.raw'>
-  
-  <a href class='posts-map badge-posts {{view.likesHeat}}'>
-    {{raw-plugin-outlet name="topic-list-before-reply-count"}}
-    {{number topic.replyCount noTitle="true"}} {{d-icon "far-comment"}}
-  </a>
-</script>
-
-
 <!-- Custom sidebar widget -->
 
 <script type="text/discourse-plugin" version="0.8">
   const ajax = require('discourse/lib/ajax').ajax;
-  
+
   let currentUser = Discourse.User.currentProp('username');
-  
+
   api.registerConnectorClass('discovery-below', 'sidebar', {
     setupComponent(args, component) {
-      ajax("/u/" + currentUser + "/summary.json").then (function(result){ 
-        
+      ajax("/u/" + currentUser + "/summary.json").then (function(result){
+
         stinkinBadges = [];
-        
+
         userLikesReceived = result.user_summary.likes_received;
         userLikesGiven = result.user_summary.likes_given;
-        
+
         result.badges.forEach(function(badges){
           stinkinBadges.push(badges);
         });
@@ -35,18 +23,20 @@
         component.set('stinkinBadges', stinkinBadges);
         component.set('userName', api.getCurrentUser().name);
         component.set('user', api.getCurrentUser().username);
-        
+
       });
-      
+
     }
-    
+
   });
-  
 </script>
 
 <!-- Custom sidebar template -->
 
-<script type='text/x-handlebars' data-template-name='/connectors/discovery-below/sidebar'>
+<script
+  type="text/x-handlebars"
+  data-template-name="/connectors/discovery-below/sidebar"
+>
   <div class="dbook-sidebar">
     {{#if (theme-setting "sidebar_show_intro")}}
     <h2>🤗 {{i18n (theme-prefix "sidebar.welcome")}} {{#if userName}}{{i18n (theme-prefix "sidebar.back")}} {{userName}} {{/if}} </h2>
@@ -55,14 +45,14 @@
 
     {{#if (theme-setting "sidebar_show_likes")}}
     {{#if userLikesGiven}}
-    <div class="likes">  
+    <div class="likes">
       <h3>{{i18n (theme-prefix "sidebar.likes_header")}}</h3>
       {{user-stat value=userLikesReceived icon="heart" label="user.summary.likes_received"}}
       {{user-stat value=userLikesGiven icon="heart" label="user.summary.likes_given"}}
     </div>
     {{/if}}
     {{/if}}
-    
+
     {{#if (theme-setting "sidebar_show_badges")}}
     {{#if stinkinBadges}}
     <div class="badges">
@@ -82,13 +72,13 @@
 
     {{#unless user}}
       <div class="visitor">
-        {{replace-emoji (i18n "signup_cta.value_prop")}} 
+        {{replace-emoji (i18n "signup_cta.value_prop")}}
         {{d-button action=(route-action "showCreateAccount") class="btn-primary sign-up-button" label="sign_up"}}
       </div>
     {{/unless}}
 
   </div>
-  
+
   {{#if user}}
   <a class="sidebar-link" href="/my/summary">{{i18n (theme-prefix "sidebar.full_profile")}}</a>
   {{/if}}
