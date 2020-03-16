@@ -17,5 +17,8 @@
       "success": "42b72a",
       "love": "fa6c8d"
     }
+  },
+  "modifiers": {
+    "serialize_topic_excerpts": true
   }
 }
