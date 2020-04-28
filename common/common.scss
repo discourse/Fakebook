@@ -8,6 +8,7 @@
 @media screen and (min-width: 650px) {
   .navigation-topics,
   .categories-list,
+  .tags-page,
   body[class*="category-"]:not(.archetype-regular):not(.archetype-banner) {
     // Structuring the main grid layout
 
@@ -15,7 +16,8 @@
       grid-area: alerts;
     }
 
-    .container:nth-of-type(2) {
+    .container:nth-of-type(2),
+    .tag-info {
       grid-area: pins;
     }
 
@@ -1037,4 +1039,15 @@ body:not(.categories-list) .topic-list {
       }
     }
   }
+}
+
+#show-tag-info {
+  margin-right: auto;
+}
+
+section.tag-info {
+  padding-top: 1.5em;
+  border-color: $border-color;
+  border-radius: 4px;
+  background: $secondary;
 }
