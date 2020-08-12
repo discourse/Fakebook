@@ -1,6 +1,8 @@
 @import "common/foundation/variables";
 @import "variables";
 
+$border-radius: 8;
+
 .alert.alert-info {
   margin-bottom: 10px;
 }
@@ -251,12 +253,11 @@ body {
 }
 
 .btn {
-  border-radius: 4px;
+  border-radius: #{$border-radius}px;
 }
 
 .btn-default {
   background: rgba(255, 255, 255, 0.7);
-  border: 1px solid $border-color;
 
   .discourse-no-touch & {
     &:hover {
@@ -266,7 +267,7 @@ body {
 }
 
 .select-kit.dropdown-select-box .dropdown-select-box-header {
-  border: 1px solid $border-color;
+  // border: 1px solid $border-color;
 }
 
 .select-kit .select-kit-row.is-selected:not(.is-highlighted) {
@@ -296,7 +297,7 @@ body {
 }
 
 .combo-box .combo-box-header {
-  border-radius: 2px;
+  border-radius: #{$border-radius / 2}px;
 }
 
 .nav-pills {
@@ -311,8 +312,8 @@ body {
 .nav-pills > li.active > a,
 .nav-pills > li > a.active {
   background: rgba(255, 255, 255, 0.7);
-  border-radius: 2px;
-  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: #{$border-radius / 2}px;
+  // border: 1px solid rgba(0, 0, 0, 0.12);
   color: $primary;
 }
 
@@ -395,7 +396,7 @@ body {
 .dbook-sidebar {
   display: none;
   background: $secondary;
-  border-radius: 4px;
+  border-radius: #{$border-radius}px;
   border: 1px solid $border-color;
   padding: 1em;
   margin-bottom: 0.5em;
@@ -481,7 +482,7 @@ body {
 }
 
 .topic-map {
-  border-radius: 4px;
+  border-radius: #{$border-radius}px;
 }
 
 // Suggested
@@ -550,19 +551,19 @@ body {
 }
 
 .badge-card {
-  border-radius: 4px;
+  border-radius: #{$border-radius}px;
 }
 
 // User
 
 .user-main .about {
-  border-radius: 4px;
+  border-radius: #{$border-radius}px;
 }
 
 .user-main .about .details {
   padding: 1em;
   border: 1px solid $primary-low;
-  border-radius: 4px;
+  border-radius: #{$border-radius}px;
   background: $secondary;
 }
 .user-main .about.collapsed-info .details {
@@ -573,7 +574,7 @@ body {
 .user-main .about .secondary {
   padding: 0.5em;
   border: 1px solid $primary-low;
-  border-radius: 4px;
+  border-radius: #{$border-radius}px;
   margin-top: 0.25em;
 }
 
@@ -588,7 +589,7 @@ body {
 
 .user-stream .item,
 .user-stream .user-stream-item {
-  border-radius: 4px;
+  border-radius: #{$border-radius}px;
   margin-bottom: 0.25em;
 }
 
@@ -612,7 +613,7 @@ body {
   background: $secondary;
   padding: 1em;
   display: block;
-  border-radius: 4px;
+  border-radius: #{$border-radius}px;
   box-sizing: border-box;
   border: 1px solid $border-color;
   thead {
@@ -684,7 +685,7 @@ body {
 
 .categories-and-latest,
 .categories-and-top {
-  border-radius: 4px;
+  border-radius: #{$border-radius}px;
 }
 
 .categories-and-latest div.column.categories,
@@ -696,7 +697,7 @@ body {
 .latest-topic-list {
   background: $secondary;
   padding: 1em;
-  border-radius: 4px;
+  border-radius: #{$border-radius}px;
   border: 1px solid $border-color;
 }
 
@@ -716,12 +717,12 @@ body {
   background: $secondary;
   margin-top: 0;
   padding: 1.5em 1em 0.5em;
-  border-radius: 4px;
+  border-radius: #{$border-radius}px;
   box-sizing: border-box;
   border: 1px solid $border-color;
   .category-box {
     width: 100%;
-    border-radius: 4px;
+    border-radius: #{$border-radius}px;
   }
   .category-box-inner {
     border-radius: 0 4px 4px 0;
@@ -782,7 +783,7 @@ body {
 .fps-result {
   background: $secondary;
   padding: 1em 1em 1em 0.7em;
-  border-radius: 4px;
+  border-radius: #{$border-radius}px;
   border: 1px solid $border-color;
   margin-bottom: 1em;
 }
@@ -805,7 +806,7 @@ body {
 .tag-list {
   background: $secondary;
   padding: 1em;
-  border-radius: 4px;
+  border-radius: #{$border-radius}px;
   border: 1px solid $border-color;
   margin-bottom: 1em;
 }
@@ -818,7 +819,7 @@ body {
 .groups-table {
   margin-top: 1em;
   background: $secondary;
-  border-radius: 4px;
+  border-radius: #{$border-radius}px;
 }
 
 .directory .me .username a,
@@ -832,7 +833,7 @@ body {
 #banner,
 .alert.alert-info {
   background: $tertiary-medium;
-  border-radius: 4px;
+  border-radius: #{$border-radius}px;
   border: 1px solid $tertiary-high;
   color: $secondary;
   .close {
@@ -849,7 +850,7 @@ body {
 .boxed.white {
   padding: 1em;
   box-sizing: border-box;
-  border-radius: 4px;
+  border-radius: #{$border-radius}px;
   border: 1px solid $border-color;
 }
 
@@ -893,8 +894,9 @@ body:not(.categories-list) .topic-list {
 
   .main-link {
     background: white;
-    border: 1px solid #dddfe2;
-    border-radius: 4px;
+    // border: 1px solid #dddfe2;
+    box-shadow: 0px 0px 2px rgba(var(--primary-rgb), .1);
+    border-radius: #{$border-radius}px;
     margin-bottom: 12px;
 
     .byline {
@@ -1048,6 +1050,6 @@ body:not(.categories-list) .topic-list {
 section.tag-info {
   padding-top: 1.5em;
   border-color: $border-color;
-  border-radius: 4px;
+  border-radius: #{$border-radius}px;
   background: $secondary;
 }
