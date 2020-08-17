@@ -64,6 +64,10 @@ $border-radius: 8;
   }
 }
 
+.admin-container {
+  overflow-x: scroll;
+}
+
 .published-page-notice {
   margin: 0 auto;
   width: calc(900px - 10em);
