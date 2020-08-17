@@ -1,7 +1,5 @@
 @import "common/foundation/variables";
 
-$border-color: #dddfe2;
-
 #main-outlet {
   padding-top: 6em;
 }
@@ -14,7 +12,7 @@ $border-color: #dddfe2;
 
 .user-table {
   padding: 1em;
-  background: $secondary;
+  background: var(--secondary, $secondary);
   box-sizing: border-box;
   border-radius: 4px;
 }
@@ -27,16 +25,18 @@ $border-color: #dddfe2;
 // Topic
 
 .topic-body {
-  background: $secondary;
+  background-image: linear-gradient(0deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.05) 100%),
+    linear-gradient(0deg, var(--secondary) 100%, var(--secondary) 100%);
   padding-right: 1em;
   width: calc(690px + (11px * 2) - 2em);
   border-radius: 0 4px 4px 0;
-  border-top: 1px solid #dddfe2;
-  border-right: 1px solid #dddfe2;
-  border-bottom: 1px solid #dddfe2;
+  border-top: 1px solid var(--primary-low);
+  border-right: 1px solid var(--primary-low);
+  border-bottom: 1px solid var(--primary-low);
   &.highlighted {
     animation: none;
-    background: $secondary !important;
+    background-image: linear-gradient(0deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.05) 100%),
+    linear-gradient(0deg, var(--secondary) 100%, var(--secondary) 100%);
   }
   @media screen and (max-width: 775px) {
     width: calc(100% - 60px);
@@ -44,13 +44,14 @@ $border-color: #dddfe2;
 }
 
 .topic-avatar {
-  background: $secondary;
+  background-image: linear-gradient(0deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.05) 100%),
+  linear-gradient(0deg, var(--secondary) 100%, var(--secondary) 100%);
   padding-left: 1em;
   padding-bottom: 1.2em;
   border-radius: 4px 0 0 4px;
-  border-top: 1px solid #dddfe2;
-  border-left: 1px solid #dddfe2;
-  border-bottom: 1px solid #dddfe2;
+  border-top: 1px solid var(--primary-low);
+  border-left: 1px solid var(--primary-low);
+  border-bottom: 1px solid var(--primary-low);
   .avatar-flair {
     top: 36px;
   }
@@ -70,7 +71,7 @@ $border-color: #dddfe2;
   font-size: 1em;
   min-height: 26px;
   align-self: stretch;
-  border-top: 1px solid $primary-low;
+  border-top: 1px solid var(--primary-low, $primary-low);
   .d-icon {
     height: 23px;
   }
@@ -78,10 +79,10 @@ $border-color: #dddfe2;
 
 .small-action-desc {
   border-radius: 0 4px 4px 0;
-  border-top: 1px solid #dddfe2;
-  border-right: 1px solid #dddfe2;
-  border-bottom: 1px solid #dddfe2;
-  background: $secondary;
+  border-top: 1px solid var(--primary-low);
+  border-right: 1px solid var(--primary-low);
+  border-bottom: 1px solid var(--primary-low);
+  background: var(--secondary, $secondary);
 }
 
 .time-gap.small-action {
@@ -94,10 +95,19 @@ $border-color: #dddfe2;
   }
 }
 
+.admin-main-nav .nav-pills {
+  justify-content: center;
+}
+
+.user-primary-navigation .nav-pills {
+  display: flex;
+  justify-content: center;
+}
+
 .embedded-posts {
   .topic-avatar,
   .topic-body {
-    border-top: 1px solid $border-color;
+    border-top: 1px solid var(--primary-very-low);
   }
 }
 
