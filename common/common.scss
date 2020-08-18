@@ -348,9 +348,6 @@ $border-radius: 8;
 // Tags Page
 .tags-page {
   #main-outlet {
-    .container + .container + .list-controls {
-      flex-basis: 100%;
-    }
     .tag-sort-options {
       flex-basis: 100%;;
     }
