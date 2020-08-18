@@ -148,7 +148,8 @@ $border-radius: 8;
         top: 6em; // required for sticky
       }
 
-      + div + span + .container {
+      + div + span + .container,
+      + span + .container {
         flex-basis: 680px;
         min-width: 0;
         justify-content: center;
@@ -160,7 +161,8 @@ $border-radius: 8;
         flex-direction: row;
       }
 
-      + div + span + .container + span {
+      + div + span + .container + span,
+      + span + .container + span {
         flex-shrink: 1;
         flex-basis: calc(20% - 2em);
         @media screen and (max-width: 1400px) {
@@ -259,14 +261,13 @@ $border-radius: 8;
   #create-topic {
     flex: 1 1 auto;
     order: 5;
+    margin-bottom: 0.5em;
+    width: 100%;
   }
 
-  .navigation-categories, 
-  .category {
-    #create-topic {
-      margin-bottom: 0.5em;
-      width: 100%;
-    }
+  #show-tag-info {
+    flex-grow: 1;
+    margin-right: 0.5em !important;
   }
 
   .tags-page.staff {
@@ -342,6 +343,21 @@ $border-radius: 8;
 .categories-and-latest div.column, .categories-and-top div.column {
   min-width: 680px;
   margin: 0 auto;
+}
+
+// Tags Page
+.tags-page {
+  #main-outlet {
+    .container + .container + .list-controls {
+      flex-basis: 100%;
+    }
+    .tag-sort-options {
+      flex-basis: 100%;;
+    }
+    .tags-list {
+      flex-basis: 100%;
+    }
+  }
 }
 
 // Global
@@ -666,6 +682,10 @@ body {
       display: inline-block;
     }
   }
+}
+
+.discourse-tag {
+  overflow: visible;
 }
 
 .topic-list .discourse-tags .discourse-tag {
