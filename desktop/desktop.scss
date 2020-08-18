@@ -1,11 +1,21 @@
 @import "common/foundation/variables";
 
+@mixin siteWidth() {
+  min-width: calc(80vw - 16px);
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
 #main-outlet {
   padding-top: 6em;
 }
 
 .d-header {
   height: 60px;
+}
+
+.d-header > .wrap {
+  @include siteWidth();
 }
 
 // User

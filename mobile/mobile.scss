@@ -21,7 +21,38 @@ body:not(.categories-list) .topic-list {
 }
 
 #main-outlet {
-  padding-top: 3em;
+  padding-top: 5em;
+  .container:first-child {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.navigation-container {
+  justify-content: space-between;
+  align-content: center;
+}
+
+#navigation-bar {
+  width: 20%;
+  flex: 0 0 0;
+  a {
+    padding: 0.5em;
+    margin: 0;
+  }
+}
+
+.list-controls .container #create-topic {
+  width: 20%;
+  flex: 0 0 0;
+  max-height: 2em;
+  margin: 0.75em 0 0 0;
+  .d-button-label {
+    display: none;
+  }
+  .d-icon {
+    margin: 0;
+  }
 }
 
 tr {
