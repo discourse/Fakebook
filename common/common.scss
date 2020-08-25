@@ -253,6 +253,12 @@ body {
 .btn {
   border-radius: 4px;
   color: #333;
+  border: 1px solid $border-color;
+  &.widget-button {
+    .d-icon {
+      color: var(--primary-very-high, $primary-very-high);
+    }
+  }
   .d-icon {
     color: #333;
   }
