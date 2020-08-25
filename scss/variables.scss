@@ -1,4 +1,8 @@
-$border-color: #dddfe2;
-$background: #e9ebee;
-$fb-dark: #1d2d49;
-$header-border: #29487d;
+@mixin fb-background() {
+  background-image: linear-gradient(0deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.15) 100%),
+    linear-gradient(0deg, var(--secondary) 100%, var(--secondary) 100%);
+}
+
+$border-color: rgba(var(--primary-rgb, $primary), 0.10);
+$background: var(--primary-low, $primary-low);
+$header-border: rgba(var(--primary-rgb, $primary), 0.25);
