@@ -3,6 +3,9 @@
 <script type="text/discourse-plugin" version="0.8">
   const ajax = require('discourse/lib/ajax').ajax;
 
+  // script wont run unless user is logged in
+  if (api.getCurrentUser() === null) return false;
+  
   let currentUser = Discourse.User.currentProp('username');
 
   api.registerConnectorClass('discovery-below', 'sidebar', {
