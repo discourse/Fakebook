@@ -1,0 +1,4 @@
+<a href class='posts-map badge-posts {{view.likesHeat}}'>
+  {{raw-plugin-outlet name="topic-list-before-reply-count"}}
+  {{number topic.replyCount noTitle="true"}} {{d-icon "far-comment"}}
+</a>

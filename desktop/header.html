@@ -5,7 +5,7 @@
 
   // script wont run unless user is logged in
   if (api.getCurrentUser() === null) return false;
-  
+
   let currentUser = Discourse.User.currentProp('username');
 
   api.registerConnectorClass('discovery-below', 'sidebar', {
