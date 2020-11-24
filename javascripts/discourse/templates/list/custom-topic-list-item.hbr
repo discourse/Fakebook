@@ -1,3 +1,5 @@
+{{!-- this custom template is shared by mobile and desktop and is called for in common/header.html --}}
+
 {{#if bulkSelectEnabled}}
 <td class="bulk-select">
   <input type="checkbox" class="bulk-select">

@@ -43,7 +43,6 @@
     #main-outlet {
       display: grid;
       grid-column-gap: 1em;
-      padding-top: 4em;
 
       @if $sidebar-alignment == "left" {
         grid-template-columns: 2fr 505px 3.5fr; // 12 column grid
@@ -343,7 +342,7 @@ body {
   border-bottom: 1px solid $header-border;
   box-shadow: none;
   .d-icon {
-    color: rgba(var(--primary-rgb, $primary),0.75);
+    color: rgba(var(--primary-rgb, $primary), 0.75);
   }
 }
 
@@ -868,7 +867,7 @@ body {
 .header-buttons {
   .sign-up-button,
   .login-button {
-    background: rgba(var(--primary-rgb, $primary),0.75);
+    background: rgba(var(--primary-rgb, $primary), 0.75);
     color: var(--tertiary-low, $tertiary-low);
     .d-icon {
       display: none;
