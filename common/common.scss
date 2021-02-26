@@ -105,6 +105,11 @@
       padding-top: 0;
     }
 
+    .navigation-controls {
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
     .list-controls {
       z-index: 100; // Above topic list content
       .container {
@@ -113,14 +118,11 @@
         top: 4em; // required for sticky
       }
 
-      .btn {
-        margin: 0;
-      }
-
       #create-topic {
         flex: 1 1 auto;
         order: 5;
         margin-bottom: 0.5em;
+        margin-left: 0;
       }
 
       button {
@@ -140,10 +142,9 @@
 
       .categories-admin-dropdown {
         order: 8;
-        margin-bottom: 0.5em;
-        margin-top: -1px;
+        margin-bottom: 0;
         button {
-          height: 2em;
+          height: 100%;
         }
       }
 
@@ -202,6 +203,32 @@
         &:before {
           content: "\f0d7";
         }
+      }
+    }
+
+    // Category breadcrumb
+
+    .category-breadcrumb {
+      > li {
+        height: unset;
+      }
+      .select-kit-header {
+        align-self: initial;
+        height: unset;
+        margin-bottom: 0;
+      }
+    }
+
+    #navigation-bar {
+      margin-top: 1em;
+      > li > a {
+        flex: 1 1 100%;
+      }
+    }
+
+    .navigation-controls {
+      button {
+        margin-bottom: var(--nav-space) !important;
       }
     }
   }
@@ -1098,6 +1125,13 @@ body:not(.categories-list) .topic-list {
 
 #show-tag-info {
   margin-right: auto;
+  flex: 1 1 auto;
+}
+
+.category-heading {
+  p {
+    margin-top: 0;
+  }
 }
 
 section.tag-info {
