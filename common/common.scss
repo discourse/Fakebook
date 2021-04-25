@@ -925,6 +925,7 @@ body {
 // admin
 
 .admin-controls .nav-pills > li a.active {
+  background: var(--primary-medium, $primary-medium);
   color: var(--secondary, $secondary);
 }
 
