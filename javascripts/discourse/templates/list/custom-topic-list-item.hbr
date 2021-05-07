@@ -53,21 +53,16 @@
       {{discourse-tags topic mode="list" tagsForUser=tagsForUser}}
 
 
-    </span>
-
-  </div>
+    </div>
+  </span>
   <div class="link-bottom-line">
-
     {{raw "list/action-list" topic=topic postNumbers=topic.liked_post_numbers className="likes" icon="heart"}}
 
     {{#if hasLikes}}
     <a class="likes" href='{{topic.summaryUrl}}'>
       {{number topic.like_count}} {{d-icon "heart"}}
     </a>
-
     {{/if}}
     {{raw "list/posts-count-column" topic=topic}}
-
   </div>
-
 </div>
