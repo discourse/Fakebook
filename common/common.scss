@@ -419,10 +419,11 @@ body {
   background: rgba(255, 255, 255, 0.7);
 }
 
+.user-menu .quick-access-panel li:hover,
 .user-menu .notifications li:hover,
 .user-menu .notifications li:focus,
-.menu-panel li a:hover,
-.menu-panel li a:focus,
+.menu-panel .widget-link:hover,
+.menu-panel .widget-link:focus,
 .menu-panel li.heading a:hover,
 .menu-panel li.heading a:focus {
   background: var(--tertiary-low, $tertiary-low);
@@ -625,6 +626,11 @@ body {
 }
 
 // User
+
+.user-content {
+  padding: 1em;
+  border-radius: 4px;
+}
 
 .user-main .about {
   border-radius: 4px;
@@ -1004,6 +1010,7 @@ body:not(.categories-list) .topic-list {
         font-size: $font-down-2;
         font-weight: normal;
         margin-top: 1px;
+        align-self: flex-start;
 
         .d-icon {
           color: currentColor;

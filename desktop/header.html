@@ -15,10 +15,11 @@
 
         const userLikesReceived = result.user_summary.likes_received;
         const userLikesGiven = result.user_summary.likes_given;
-
-        result.badges.forEach(function(badges){
-          stinkinBadges.push(badges);
-        });
+        if (result.badges) {
+          result.badges.forEach(function(badges){
+            stinkinBadges.push(badges);
+          });
+        }
 
         component.set('userLikesReceived', userLikesReceived);
         component.set('userLikesGiven', userLikesGiven);
