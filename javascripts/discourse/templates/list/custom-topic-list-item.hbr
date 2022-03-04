@@ -6,7 +6,7 @@
 </td>
 {{/if}}
 
-<div class='main-link clearfix' colspan="1">
+<div class='main-link topic-list-data clearfix' colspan="1">
   <span class='link-top-line'>
     <div class="byline">
       <div class="author">
