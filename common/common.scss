@@ -968,16 +968,16 @@ body {
 // topic list
 
 body:not(.categories-list) .topic-list {
-  tbody {
+  .topic-list-body {
     border: none;
   }
 
-  tr {
+  .topic-list-item {
     border: none;
   }
 
   .topic-list-item-separator {
-    td {
+    .topic-list-data {
       display: block;
       width: 486px;
       margin-bottom: 1em;
