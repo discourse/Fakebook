@@ -1,5 +1,5 @@
 <script type="text/discourse-plugin" version="0.8">
-  import { htmlSafe } from "@ember/template";
+  const { htmlSafe } = require("@ember/template");
   const { findRawTemplate } = require("discourse-common/lib/raw-templates");
 
   api.modifyClass('component:topic-list-item', {
