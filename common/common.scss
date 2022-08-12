@@ -1169,3 +1169,16 @@ section.tag-info {
 .embedded-posts.top .row .topic-body {
   border: none;
 }
+
+// Welcome Topic Banner
+.welcome-topic-banner {
+  @include fb-background();
+  border: 1px solid $border-color;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  box-shadow: none;
+
+  .col-text {
+    margin-left: 1.25em;
+  }
+}
