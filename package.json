@@ -1,0 +1,10 @@
+{
+  "name": "Fakebook",
+  "version": "0.0.1",
+  "repository": "https://github.com/Fakebook",
+  "author": "Discourse",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint-config-discourse": "^3.2.0"
+  }
+}
