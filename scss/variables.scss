@@ -1,6 +1,14 @@
 @mixin fb-background() {
-  background-image: linear-gradient(0deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.15) 100%),
-    linear-gradient(0deg, var(--secondary, $secondary) 100%, var(--secondary, $secondary) 100%);
+  background-image: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(255, 255, 255, 0.15) 100%
+    ),
+    linear-gradient(
+      0deg,
+      var(--secondary, $secondary) 100%,
+      var(--secondary, $secondary) 100%
+    );
 }
 
 $border-color: rgba(var(--primary-rgb, $primary), 0.15);
