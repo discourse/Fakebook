@@ -1,0 +1,33 @@
+.sidebar-wrapper {
+  background: none;
+
+  .sidebar-scroll-wrap {
+    --scrollbarThumbBg: var(--primary-300);
+    --scrollbarWidth: 0.5em;
+
+    &:hover {
+      &::-webkit-scrollbar-thumb {
+        border: none;
+      }
+    }
+  }
+}
+
+.sidebar-section-header.btn {
+  border: none;
+}
+
+.sidebar-footer-wrapper {
+  background: none;
+  .desktop-view & {
+    .sidebar-footer-container {
+      &:before {
+        background: linear-gradient(
+          to bottom,
+          transparent,
+          rgba(var(--primary-low-rgb), 1)
+        );
+      }
+    }
+  }
+}
