@@ -1,6 +1,10 @@
 @import "common/foundation/variables";
 @import "variables";
 
+.topic-list-header {
+  display: none;
+}
+
 .alert.alert-info {
   margin-bottom: 10px;
 }
