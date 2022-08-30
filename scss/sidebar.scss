@@ -1,0 +1,102 @@
+// Sidebar Style Overrides
+.sidebar-wrapper {
+  background: none;
+
+  .sidebar-scroll-wrap {
+    --scrollbarThumbBg: var(--primary-300);
+    --scrollbarWidth: 0.5em;
+
+    &:hover {
+      &::-webkit-scrollbar-thumb {
+        border: none;
+      }
+    }
+  }
+}
+
+.sidebar-section-header.btn {
+  border: none;
+}
+
+.sidebar-footer-wrapper {
+  background: none;
+  .desktop-view & {
+    .sidebar-footer-container {
+      background: none;
+      &:before {
+        background: linear-gradient(
+          to bottom,
+          transparent,
+          rgba(var(--primary-low-rgb), 1)
+        );
+      }
+    }
+  }
+}
+
+// Fakebook overrides when sidebar_enabled
+.has-sidebar-page {
+  @media screen and (min-width: 650px) {
+    &.navigation-topics,
+    &.categories-list,
+    &.tags-page,
+    &[class*="category-"]:not(.archetype-regular):not(.archetype-banner) {
+      // Structuring the main grid layout
+      #main-outlet {
+        @if $sidebar-alignment == "left" {
+          grid-template-areas:
+            "alerts alerts alerts"
+            "pins pins pins"
+            "nav nav sidebar"
+            "topic-list topic-list sidebar";
+        } @else {
+          // todo
+          grid-template-areas:
+            "alerts alerts alerts"
+            "pins pins pins"
+            "sidebar topic-list nav";
+        }
+        // todo max-width: 920px;
+      }
+
+      // Changing the layout to fit the grid
+      .category-breadcrumb {
+        font-size: var(--font-0);
+      }
+
+      .navigation-controls {
+        flex-wrap: nowrap;
+        width: unset;
+        align-self: center;
+      }
+
+      .list-controls {
+        .container {
+          --nav-space: 0.75em;
+          margin-bottom: var(--nav-space);
+
+          .navigation-container {
+            --nav-space: 0;
+          }
+        }
+
+        #navigation-bar {
+          margin-top: unset;
+        }
+
+        .nav-pills {
+          flex-direction: row;
+        }
+
+        .category-navigation,
+        .navigation-container {
+          flex-wrap: nowrap;
+        }
+
+        ol {
+          flex-wrap: nowrap;
+        }
+      }
+    }
+  }
+}
