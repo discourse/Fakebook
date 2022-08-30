@@ -9,6 +9,11 @@ body:not(.categories-list) .topic-list {
   table-layout: auto !important;
   display: block;
   overflow: hidden;
+
+  .topic-list-data {
+    max-width: unset;
+  }
+
   tbody {
     display: block;
     tr {
