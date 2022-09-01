@@ -561,6 +561,14 @@ body {
   border-radius: 4px;
 }
 
+.topic-avatar {
+  height: unset;
+}
+
+.topic-post.sticky-avatar .topic-avatar {
+  margin-bottom: 0;
+}
+
 // Suggested
 
 #suggested-topics {
