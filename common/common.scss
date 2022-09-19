@@ -1184,14 +1184,14 @@ section.tag-info {
 }
 
 // Welcome Topic Banner
-.welcome-topic-banner {
+.welcome-cta {
   @include fb-background();
   border: 1px solid $border-color;
   border-radius: 4px;
   margin-bottom: 12px;
   box-shadow: none;
 
-  .col-text {
+  &__content {
     margin-left: 1.25em;
   }
 }
