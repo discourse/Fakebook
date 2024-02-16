@@ -1,0 +1,1 @@
+{{discourse-tags view.topic mode="list" tagsForUser=tagsForUser}}

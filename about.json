@@ -2,8 +2,7 @@
   "name": "Fakebook",
   "about_url": "https://meta.discourse.org/t/fakebook-a-theme-for-social-media-lovers/109079",
   "license_url": "https://github.com/discourse/Fakebook/blob/main/LICENSE",
-  "assets": {
-  },
+  "assets": {},
   "color_schemes": {
     "Fakebook": {
       "primary": "333",
@@ -19,6 +18,10 @@
     }
   },
   "modifiers": {
+    "topic_thumbnail_sizes": [
+      [400, 400],
+      [800, 800]
+    ],
     "serialize_topic_excerpts": true
   }
 }
