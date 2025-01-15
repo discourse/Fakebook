@@ -1,0 +1,2 @@
+{{!-- has-modern-replacement --}}
+{{~raw "topic-thumbnail" topic=context.topic}}

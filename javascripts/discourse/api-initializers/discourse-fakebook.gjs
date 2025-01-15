@@ -8,36 +8,44 @@ import TopicTags from "../components/topic-tags";
 import TopicThumbnail from "../components/topic-thumbnail";
 
 export default {
-  name: "discourse-topic-list-cards",
+  name: "discourse-fakebook",
 
   initialize() {
-    withPluginApi("1.39.0", (api) => this.initWithApi(api));
-  },
+    withPluginApi("1.39.0", (api) => {
+      api.renderInOutlet("discovery-below", <template>
+        <CustomSidebar />
+      </template>);
 
-  initWithApi(api) {
-    api.renderInOutlet("discovery-below", <template>
-      <CustomSidebar />
-    </template>);
+      api.registerValueTransformer(
+        "topic-list-item-mobile-layout",
+        () => false
+      );
+      api.registerValueTransformer(
+        "topic-list-columns",
+        ({ value: columns }) => {
+          columns.add("topic-op", { item: TopicOp }, { before: "topic" });
+          columns.add(
+            "topic-likes",
+            { item: TopicLikes },
+            { before: "replies" }
+          );
 
-    api.registerValueTransformer("topic-list-item-mobile-layout", () => false);
-    api.registerValueTransformer("topic-list-columns", ({ value: columns }) => {
-      columns.add("topic-op", { item: TopicOp }, { before: "topic" });
-      columns.add("topic-likes", { item: TopicLikes }, { before: "replies" });
+          columns.delete("posters");
+          columns.delete("activity");
+          columns.delete("likes");
+          columns.delete("op-likes");
+          columns.delete("views");
 
-      columns.delete("posters");
-      columns.delete("activity");
-      columns.delete("likes");
-      columns.delete("op-likes");
-      columns.delete("views");
+          return columns;
+        }
+      );
 
-      return columns;
+      api.renderInOutlet("topic-list-before-reply-count", <template>
+        {{dIcon "far-comment"}}
+      </template>);
+      api.renderInOutlet("topic-list-main-link-bottom", TopicExcerpt);
+      api.renderInOutlet("topic-list-main-link-bottom", TopicTags);
+      api.renderInOutlet("topic-list-main-link-bottom", TopicThumbnail);
     });
-
-    api.renderInOutlet("topic-list-before-reply-count", <template>
-      {{dIcon "far-comment"}}
-    </template>);
-    api.renderInOutlet("topic-list-main-link-bottom", TopicExcerpt);
-    api.renderInOutlet("topic-list-main-link-bottom", TopicTags);
-    api.renderInOutlet("topic-list-main-link-bottom", TopicThumbnail);
   },
 };
