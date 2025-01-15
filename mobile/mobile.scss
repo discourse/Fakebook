@@ -199,6 +199,7 @@ tr {
     display: flex;
   }
 
+  // TODO: (discourse.hbr-topic-list-overrides) remove the styles below after the legacy topic list is removed from core
   body.hbr-topic-list__fakebook & {
     .main-link a.title {
       padding-left: var(--custom-list-item-space);
