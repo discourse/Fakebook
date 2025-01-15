@@ -1,9 +1,0 @@
-<div class="topic-list-op">
-  <a href="{{topic.posters.[0].user.userPath}}" data-user-card="{{topic.posters.[0].user.username}}">
-    {{avatar topic.posters.[0].user imageSize='medium'}}
-    <span class="username">
-      {{topic.posters.[0].user.username}}
-    </span>
-    {{format-date topic.createdAt format="tiny"}}
-  </a>
-</div>

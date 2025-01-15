@@ -1,3 +1,0 @@
-<div class="topic-likes">
-  {{view.topic.like_count}} {{d-icon "heart"}}
-</div>

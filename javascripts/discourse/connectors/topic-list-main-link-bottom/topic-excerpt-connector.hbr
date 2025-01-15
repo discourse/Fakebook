@@ -1,1 +1,0 @@
-{{~raw 'topic-excerpt' topic=context.topic}}

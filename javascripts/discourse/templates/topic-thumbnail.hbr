@@ -1,8 +1,0 @@
-{{#if view.topic.thumbnails}}
-  <img 
-    class="topic-thumbnail" 
-    srcset="{{view.topic.thumbnails.[2].url}} 1x, {{view.topic.thumbnails.[1].url}} 2x"
-    src="{{view.topic.thumbnails.[1].url}}"
-    alt="" 
-  />
-{{/if}}
