@@ -61,16 +61,16 @@ export default class CustomSidebar extends Component {
         {{/if}}
 
         {{#if settings.sidebar_show_likes}}
-          {{#if this.userDetails}}
+          {{#if this.userDetails.user_summary}}
             <div class="likes">
               <h3>{{i18n (themePrefix "sidebar.likes_header")}}</h3>
               <UserStat
-                @value={{this.userDetails.likes_received}}
+                @value={{this.userDetails.user_summary.likes_received}}
                 @icon="heart"
                 @label="user.summary.likes_received.other"
               />
               <UserStat
-                @value={{this.userDetails.likes_given}}
+                @value={{this.userDetails.user_summary.likes_given}}
                 @icon="heart"
                 @label="user.summary.likes_given.other"
               />
