@@ -80,6 +80,7 @@ tr {
     border: none !important;
     margin-bottom: 0.25em;
   }
+
   tr {
     background: var(--secondary, $secondary);
     overflow: hidden;
@@ -87,6 +88,7 @@ tr {
     margin-bottom: 10px;
     border: 1px solid var(--primary-low, $primary-low);
   }
+
   td {
     box-sizing: border-box;
     padding: 1em;
@@ -104,11 +106,14 @@ tr {
 
 .categories-list .category-list td {
   flex: 1 1 auto;
+
   &.main-link {
     flex: 0 1 70%;
   }
+
   &.num.posts {
     text-align: right;
+
     a.badge-posts {
       font-weight: normal;
     }
@@ -137,6 +142,7 @@ tr {
   .topic-list-data:not(.posts) {
     display: contents;
     max-width: unset;
+
     .pull-left {
       display: none;
     }
@@ -158,44 +164,17 @@ tr {
 
   .main-link a.title {
     padding-top: calc(var(--custom-list-item-space) * 1.5);
-    padding-left: var(--custom-list-item-space);
     grid-area: title;
-  }
-
-  .main-link .topic-statuses {
-    grid-area: title;
-    padding-top: calc(var(--custom-list-item-space) * 1.7);
-    padding-left: var(--custom-list-item-space);
-
-    // this is a little workaround
-    // to adjust the title position based on status icons
-    // because they don't share the same parent on mobile
-
-    &:has(a) + a.title {
-      padding-left: var(--status-width);
-    }
-
-    &:has(a + a) + a.title {
-      padding-left: calc(var(--status-width) * 2);
-    }
-
-    // usually doesn't happen
-    &:has(a + a + a) + a.title {
-      padding-left: calc(var(--status-width) * 3);
-    }
-
-    // a little extreme at this point
-    &:has(a + a + a + a) + a.title {
-      padding-left: calc(var(--status-width) * 4);
-    }
   }
 
   .topic-item-stats__category-tags {
     grid-area: category;
     margin-right: 0;
+
     .discourse-tags {
       display: none;
     }
+
     .badge-category__wrapper {
       margin-right: 0;
     }
@@ -211,19 +190,64 @@ tr {
   }
 
   .topic-post-badges {
-    // these aren't a child of the title on mobile
-    // and take the place of the reply count when there are
-    // so it's not 1:1 with desktop
-    grid-area: replies;
     box-sizing: border-box;
     padding-top: var(--custom-list-item-space);
     padding-bottom: var(--custom-list-item-space);
     padding-right: var(--custom-list-item-space);
-    border-top: 1px solid var(--primary-low);
     margin-top: var(--custom-list-item-space);
-    font-size: var(--font-down-1);
+    font-size: var(--font-down-3);
     display: flex;
-    justify-content: end;
-    width: 100%;
+  }
+
+  // TODO: (discourse.hbr-topic-list-overrides) remove the styles below after the legacy topic list is removed from core
+  body.hbr-topic-list__fakebook & {
+    .main-link a.title {
+      padding-left: var(--custom-list-item-space);
+    }
+
+    .main-link .topic-statuses {
+      grid-area: title;
+      padding-top: calc(var(--custom-list-item-space) * 1.7);
+      padding-left: var(--custom-list-item-space);
+
+      // this is a little workaround
+      // to adjust the title position based on status icons
+      // because they don't share the same parent on mobile
+
+      &:has(a) + a.title {
+        padding-left: var(--status-width);
+      }
+
+      &:has(a + a) + a.title {
+        padding-left: calc(var(--status-width) * 2);
+      }
+
+      // usually doesn't happen
+      &:has(a + a + a) + a.title {
+        padding-left: calc(var(--status-width) * 3);
+      }
+
+      // a little extreme at this point
+      &:has(a + a + a + a) + a.title {
+        padding-left: calc(var(--status-width) * 4);
+      }
+    }
+
+    .topic-post-badges {
+      // these aren't a child of the title on mobile
+      // and take the place of the reply count when there are
+      // so it's not 1:1 with desktop
+      grid-area: replies;
+      box-sizing: border-box;
+      padding-top: var(--custom-list-item-space);
+      padding-bottom: var(--custom-list-item-space);
+      padding-right: var(--custom-list-item-space);
+      border-top: 1px solid var(--primary-low);
+      margin-top: var(--custom-list-item-space);
+      font-size: var(--font-down-1);
+      display: flex;
+      justify-content: end;
+      width: 100%;
+    }
   }
 }

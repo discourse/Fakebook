@@ -3,10 +3,12 @@ import { tracked } from "@glimmer/tracking";
 import { action } from "@ember/object";
 import didInsert from "@ember/render-modifiers/modifiers/did-insert";
 import { service } from "@ember/service";
+import { eq } from "truth-helpers";
 import BadgeButton from "discourse/components/badge-button";
 import ConditionalLoadingSpinner from "discourse/components/conditional-loading-spinner";
 import DButton from "discourse/components/d-button";
 import UserStat from "discourse/components/user-stat";
+import bodyClass from "discourse/helpers/body-class";
 import concatClass from "discourse/helpers/concat-class";
 import replaceEmoji from "discourse/helpers/replace-emoji";
 import routeAction from "discourse/helpers/route-action";
@@ -15,6 +17,7 @@ import i18n from "discourse-common/helpers/i18n";
 
 export default class CustomSidebar extends Component {
   @service currentUser;
+  @service site;
   @tracked userDetails;
   @tracked loading;
 
@@ -40,6 +43,10 @@ export default class CustomSidebar extends Component {
   }
 
   <template>
+    {{! TODO: (discourse.hbr-topic-list-overrides) remove the condition below after the legacy topic list is removed from core }}
+    {{#if (eq this.site.useGlimmerTopicList false)}}
+      {{bodyClass "hbr-topic-list__fakebook"}}
+    {{/if}}
     <div class="dbook-sidebar" {{didInsert this.fetchUserDetails}}>
       <ConditionalLoadingSpinner @condition={{this.loading}}>
         {{#if settings.sidebar_show_intro}}
@@ -54,16 +61,16 @@ export default class CustomSidebar extends Component {
         {{/if}}
 
         {{#if settings.sidebar_show_likes}}
-          {{#if this.userDetails}}
+          {{#if this.userDetails.user_summary}}
             <div class="likes">
               <h3>{{i18n (themePrefix "sidebar.likes_header")}}</h3>
               <UserStat
-                @value={{this.userDetails.likes_received}}
+                @value={{this.userDetails.user_summary.likes_received}}
                 @icon="heart"
                 @label="user.summary.likes_received.other"
               />
               <UserStat
-                @value={{this.userDetails.likes_given}}
+                @value={{this.userDetails.user_summary.likes_given}}
                 @icon="heart"
                 @label="user.summary.likes_given.other"
               />

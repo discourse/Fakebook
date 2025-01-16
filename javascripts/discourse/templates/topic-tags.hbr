@@ -1,1 +1,2 @@
+{{!-- has-modern-replacement --}}
 {{discourse-tags view.topic mode="list" tagsForUser=tagsForUser}}

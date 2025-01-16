@@ -1,1 +1,2 @@
+{{!-- has-modern-replacement --}}
 {{~raw "topic-tags" topic=context.topic}}

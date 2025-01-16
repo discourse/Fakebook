@@ -1,3 +1,4 @@
+{{!-- has-modern-replacement --}}
 <div class="topic-excerpt">
   {{dir-span view.topic.escapedExcerpt htmlSafe="true"}}
 </div>
