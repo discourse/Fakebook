@@ -1,4 +1,4 @@
-import dIcon from "discourse-common/helpers/d-icon";
+import dIcon from "discourse/helpers/d-icon";
 
 const TopicLikes = <template>
   <div class="topic-likes">
