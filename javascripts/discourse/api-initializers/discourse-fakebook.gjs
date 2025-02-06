@@ -1,5 +1,5 @@
+import dIcon from "discourse/helpers/d-icon";
 import { apiInitializer } from "discourse/lib/api";
-import dIcon from "discourse-common/helpers/d-icon";
 import CustomSidebar from "../components/custom-sidebar";
 import TopicExcerpt from "../components/topic-excerpt";
 import TopicLikes from "../components/topic-likes";
