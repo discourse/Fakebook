@@ -49,13 +49,11 @@ tr {
 }
 
 // User
-
 .user-main .about {
   background: transparent;
 }
 
 // Topics
-
 .post-stream {
   article,
   .small-action {
@@ -94,7 +92,6 @@ tr {
     padding: 1em;
     max-width: unset;
     display: block;
-
     width: 100%;
   }
 }
@@ -135,7 +132,6 @@ tr {
 // The mobile template is different
 // so these are the neccessary adjustments
 // to make it look like the desktop version
-
 .user-content .topic-list,
 .more-topics__list .topic-list,
 .contents > .topic-list {
@@ -213,7 +209,6 @@ tr {
       // this is a little workaround
       // to adjust the title position based on status icons
       // because they don't share the same parent on mobile
-
       &:has(a) + a.title {
         padding-left: var(--status-width);
       }

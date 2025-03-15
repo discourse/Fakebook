@@ -20,10 +20,12 @@
 
 .sidebar-footer-wrapper {
   background: none;
+
   .desktop-view & {
     .sidebar-footer-container {
       background: none;
-      &:before {
+
+      &::before {
         background: linear-gradient(
           to bottom,
           transparent,
@@ -51,10 +53,12 @@
 
 .sidebar-section-link-wrapper .sidebar-section-link-button {
   border-radius: 0;
+
   .d-icon {
     color: var(--tertiary);
     margin-right: 0.2em;
   }
+
   &:hover {
     .d-icon {
       color: var(--tertiary);
@@ -66,16 +70,19 @@
   button {
     padding: 0.25em 0.4em;
     color: var(--d-sidebar-link-icon-color);
+
     .d-icon {
       font-size: var(--font-down-1);
-      color: currentColor;
+      color: currentcolor;
     }
+
     .discourse-no-touch & {
       &:hover {
         color: var(--primary-medium);
         background: var(--primary-very-low);
+
         .d-icon {
-          color: currentColor;
+          color: currentcolor;
         }
       }
     }
@@ -88,7 +95,7 @@
     &.navigation-topics,
     &.categories-list,
     &.tags-page,
-    &[class*="category-"]:not(.archetype-regular):not(.archetype-banner) {
+    &[class*="category-"]:not(.archetype-regular, .archetype-banner) {
       // Structuring the main grid layout
       #main-outlet {
         @if $sidebar-alignment == "left" {
@@ -104,6 +111,7 @@
             "pins pins pins"
             "sidebar topic-list nav";
         }
+
         // todo max-width: 920px;
       }
 

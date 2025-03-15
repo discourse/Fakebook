@@ -24,9 +24,10 @@ export default apiInitializer("1.39.0", (api) => {
     return columns;
   });
 
-  api.renderInOutlet("topic-list-before-reply-count", <template>
-    {{dIcon "far-comment"}}
-  </template>);
+  api.renderInOutlet(
+    "topic-list-before-reply-count",
+    <template>{{dIcon "far-comment"}}</template>
+  );
   api.renderInOutlet("topic-list-main-link-bottom", TopicExcerpt);
   api.renderInOutlet("topic-list-main-link-bottom", TopicTags);
   api.renderInOutlet("topic-list-main-link-bottom", TopicThumbnail);

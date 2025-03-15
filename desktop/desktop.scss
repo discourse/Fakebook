@@ -6,7 +6,6 @@
 }
 
 // User
-
 .user-table {
   padding: 1em;
   background: var(--secondary, $secondary);
@@ -20,32 +19,35 @@
 }
 
 // Topic
-
 .topic-body {
-  @include fb-background();
+  @include fb-background;
   padding-right: 1em;
   width: calc(690px + (11px * 2) - 2em);
   border-radius: 0 4px 4px 0;
   border-top: 1px solid $border-color;
   border-right: 1px solid $border-color;
   border-bottom: 1px solid $border-color;
+
   &.highlighted {
     animation: none;
-    @include fb-background();
+
+    @include fb-background;
   }
+
   @media screen and (max-width: 775px) {
     width: calc(100% - 60px);
   }
 }
 
 .topic-avatar {
-  @include fb-background();
+  @include fb-background;
   padding-left: 1em;
   padding-bottom: 1.2em;
   border-radius: 4px 0 0 4px;
   border-top: 1px solid $border-color;
   border-left: 1px solid $border-color;
   border-bottom: 1px solid $border-color;
+
   .avatar-flair {
     top: 36px;
   }
@@ -66,6 +68,7 @@
   min-height: 26px;
   align-self: stretch;
   border-top: 1px solid var(--primary-low, $primary-low);
+
   .d-icon {
     height: 23px;
   }
@@ -84,6 +87,7 @@
     background: transparent;
     border: none;
   }
+
   .topic-avatar {
     display: none;
   }
