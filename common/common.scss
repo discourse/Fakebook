@@ -61,7 +61,7 @@
       grid-template-rows: auto auto 1fr;
 
       @if $sidebar-alignment == "left" {
-        grid-template-columns: 169px minmax(0, 2fr) 1fr; // 12 column grid
+        grid-template-columns: 169px minmax(0, 2fr) 1fr;
         grid-template-areas:
           "alerts alerts alerts"
           "pins pins pins"
