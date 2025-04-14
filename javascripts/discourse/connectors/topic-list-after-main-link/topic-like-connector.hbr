@@ -1,2 +1,0 @@
-{{!-- has-modern-replacement --}}
-{{~raw 'topic-likes' topic=context.topic}}

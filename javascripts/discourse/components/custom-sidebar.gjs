@@ -3,12 +3,10 @@ import { tracked } from "@glimmer/tracking";
 import { action } from "@ember/object";
 import didInsert from "@ember/render-modifiers/modifiers/did-insert";
 import { service } from "@ember/service";
-import { eq } from "truth-helpers";
 import BadgeButton from "discourse/components/badge-button";
 import ConditionalLoadingSpinner from "discourse/components/conditional-loading-spinner";
 import DButton from "discourse/components/d-button";
 import UserStat from "discourse/components/user-stat";
-import bodyClass from "discourse/helpers/body-class";
 import concatClass from "discourse/helpers/concat-class";
 import replaceEmoji from "discourse/helpers/replace-emoji";
 import routeAction from "discourse/helpers/route-action";
@@ -44,10 +42,6 @@ export default class CustomSidebar extends Component {
   }
 
   <template>
-    {{! TODO: (discourse.hbr-topic-list-overrides) remove the condition below after the legacy topic list is removed from core }}
-    {{#if (eq this.site.useGlimmerTopicList false)}}
-      {{bodyClass "hbr-topic-list__fakebook"}}
-    {{/if}}
     <div class="dbook-sidebar" {{didInsert this.fetchUserDetails}}>
       <ConditionalLoadingSpinner @condition={{this.loading}}>
         {{#if settings.sidebar_show_intro}}
