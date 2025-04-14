@@ -105,7 +105,6 @@
       width: 100%;
       gap: 0.5em;
 
-
       > :not(:last-child) {
         margin: 0;
       }
@@ -125,7 +124,6 @@
         order: 5;
         margin: 0;
       }
-
 
       .notifications-button {
         order: 7;
@@ -221,7 +219,6 @@
 
     // Category breadcrumb
     .category-breadcrumb {
-
       .badge-wrapper.bullet .badge-category-parent-bg,
       .badge-wrapper.bullet .badge-category-bg {
         width: 10px;
@@ -236,9 +233,7 @@
       > li {
         height: unset;
         min-width: 0;
-
       }
-
 
       .select-kit .select-kit-header {
         align-self: initial;
@@ -276,7 +271,7 @@
       }
 
       #navigation-bar {
-        width: 100%;;
+        width: 100%;
       }
     }
   }
@@ -636,7 +631,7 @@ body {
 }
 
 .topic-post.sticky-avatar > article > .row > .topic-avatar {
-  margin-bottom: 0 ;
+  margin-bottom: 0;
 }
 
 // Suggested

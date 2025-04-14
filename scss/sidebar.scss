@@ -133,7 +133,7 @@
 
           .navigation-container {
             --nav-space: 0;
-            gap: .5em;
+            gap: 0.5em;
           }
         }
 
@@ -144,8 +144,6 @@
         .nav-pills {
           flex-direction: row;
         }
-
-      
 
         ol {
           flex-wrap: nowrap;
