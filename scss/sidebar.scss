@@ -133,6 +133,7 @@
 
           .navigation-container {
             --nav-space: 0;
+            gap: 0.5em;
           }
         }
 
@@ -142,11 +143,6 @@
 
         .nav-pills {
           flex-direction: row;
-        }
-
-        .category-navigation,
-        .navigation-container {
-          flex-wrap: nowrap;
         }
 
         ol {
