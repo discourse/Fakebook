@@ -133,6 +133,7 @@
 
           .navigation-container {
             --nav-space: 0;
+            gap: .5em;
           }
         }
 
@@ -144,10 +145,7 @@
           flex-direction: row;
         }
 
-        .category-navigation,
-        .navigation-container {
-          flex-wrap: nowrap;
-        }
+      
 
         ol {
           flex-wrap: nowrap;

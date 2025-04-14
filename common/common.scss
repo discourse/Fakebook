@@ -2,6 +2,10 @@
 @import "variables";
 @import "sidebar";
 
+:root {
+  --d-nav-underline-height: 0;
+}
+
 .topic-list-header {
   display: none;
 }
@@ -57,13 +61,13 @@
       grid-template-rows: auto auto 1fr;
 
       @if $sidebar-alignment == "left" {
-        grid-template-columns: 169px 505px 3.5fr; // 12 column grid
+        grid-template-columns: 169px minmax(0, 2fr) 1fr; // 12 column grid
         grid-template-areas:
           "alerts alerts alerts"
           "pins pins pins"
           "nav topic-list sidebar";
       } @else {
-        grid-template-columns: 3.5fr 505px 169px;
+        grid-template-columns: 1fr minmax(0, 2fr) 169px;
         grid-template-areas:
           "alerts alerts alerts"
           "pins pins pins"
@@ -85,6 +89,10 @@
             "topic-list nav";
         }
       }
+
+      > .container:not(.list-container) + span {
+        display: none;
+      }
     }
 
     .latest-topic-list .table-heading,
@@ -97,9 +105,6 @@
       width: 100%;
       gap: 0.5em;
 
-      .fk-d-button-tooltip {
-        width: 100%;
-      }
 
       > :not(:last-child) {
         margin: 0;
@@ -121,9 +126,6 @@
         margin: 0;
       }
 
-      button {
-        order: 6;
-      }
 
       .notifications-button {
         order: 7;
@@ -134,6 +136,7 @@
       }
 
       .edit-category {
+        order: 6;
         flex: 1 1 auto;
         margin-right: 0.5em;
       }
@@ -218,7 +221,6 @@
 
     // Category breadcrumb
     .category-breadcrumb {
-      font-size: 1.1487em;
 
       .badge-wrapper.bullet .badge-category-parent-bg,
       .badge-wrapper.bullet .badge-category-bg {
@@ -234,7 +236,9 @@
       > li {
         height: unset;
         min-width: 0;
+
       }
+
 
       .select-kit .select-kit-header {
         align-self: initial;
@@ -260,6 +264,19 @@
 
       > li > a {
         flex: 1 1 100%;
+      }
+    }
+
+    &:not(.has-sidebar-page) {
+      .category-breadcrumb {
+        > li,
+        .single-select {
+          width: 100%;
+        }
+      }
+
+      #navigation-bar {
+        width: 100%;;
       }
     }
   }
@@ -618,8 +635,8 @@ body {
   height: unset;
 }
 
-.topic-post.sticky-avatar .topic-avatar {
-  margin-bottom: 0;
+.topic-post.sticky-avatar > article > .row > .topic-avatar {
+  margin-bottom: 0 ;
 }
 
 // Suggested
