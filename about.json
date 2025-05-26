@@ -23,5 +23,6 @@
       [800, 800]
     ],
     "serialize_topic_excerpts": true
-  }
+  },
+  "screenshots": ["screenshots/light.png", "screenshots/dark.png"]
 }
