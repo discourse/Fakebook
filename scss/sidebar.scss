@@ -29,7 +29,7 @@
         background: linear-gradient(
           to bottom,
           transparent,
-          rgba(var(--primary-low-rgb), 1)
+          rgb(var(--primary-low-rgb), 1)
         );
       }
     }
@@ -91,7 +91,7 @@
 
 // Fakebook overrides when sidebar_enabled
 .has-sidebar-page {
-  @media screen and (min-width: 650px) {
+  @media screen and (width >= 650px) {
     &.navigation-topics,
     &.categories-list,
     &.tags-page,
