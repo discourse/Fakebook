@@ -34,7 +34,7 @@
     @include fb-background;
   }
 
-  @media screen and (max-width: 775px) {
+  @media screen and (width <= 775px) {
     width: calc(100% - 60px);
   }
 }

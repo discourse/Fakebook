@@ -14,7 +14,7 @@
   margin-bottom: 10px;
 }
 
-@media screen and (min-width: 650px) {
+@media screen and (width >= 650px) {
   .navigation-topics,
   .categories-list,
   .tags-page,
@@ -50,7 +50,7 @@
         display: block;
       }
 
-      @media screen and (max-width: 920px) {
+      @media screen and (width <= 920px) {
         display: none;
       }
     }
@@ -74,7 +74,7 @@
           "sidebar topic-list nav";
       }
 
-      @media screen and (max-width: 920px) {
+      @media screen and (width <= 920px) {
         @if $sidebar-alignment == "left" {
           grid-template-columns: 20% calc(80% - 1em);
           grid-template-areas:
@@ -337,7 +337,7 @@ body {
 }
 
 .btn-default {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgb(255, 255, 255, 0.7);
   border: 1px solid $border-color;
 
   .discourse-no-touch & {
@@ -359,7 +359,7 @@ body {
   .topic-footer-main-buttons
   .topic-admin-menu-button-container {
   .btn {
-    background: rgba(255, 255, 255, 0.7);
+    background: rgb(255, 255, 255, 0.7);
 
     .discourse-no-touch & {
       &:hover {
@@ -370,7 +370,7 @@ body {
 }
 
 .widget-button.btn.popup-menu-button.toggle-admin-menu.keyboard-target-admin-menu.no-text.btn-icon {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgb(255, 255, 255, 0.7);
 
   .discourse-no-touch & {
     &:hover {
@@ -432,9 +432,9 @@ body {
 .nav-pills > li > a:hover,
 .nav-pills > li.active > a,
 .nav-pills > li > a.active {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgb(255, 255, 255, 0.7);
   border-radius: 2px;
-  border: 1px solid rgba(0, 0, 0, 0.12);
+  border: 1px solid rgb(0, 0, 0, 0.12);
   color: #333;
 }
 
@@ -467,7 +467,7 @@ body {
 
 .d-header-icons .icon:hover,
 .d-header-icons .icon:focus {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgb(255, 255, 255, 0.7);
 }
 
 .user-menu .quick-access-panel li:hover,
@@ -496,7 +496,7 @@ body {
   position: sticky;
   max-width: 310px;
 
-  @media screen and (max-width: 920px) {
+  @media screen and (width <= 920px) {
     display: none;
   }
 
