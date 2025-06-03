@@ -1,4 +1,6 @@
 en:
+  theme_metadata:
+    description: "A playful take on a familiar layout, showcasing the flexibility of the Discourse theming system"
   sidebar:
     welcome: "🤗 Welcome"
     back: "back,"
