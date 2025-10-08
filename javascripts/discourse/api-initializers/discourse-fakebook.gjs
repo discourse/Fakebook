@@ -7,7 +7,7 @@ import TopicOp from "../components/topic-op";
 import TopicTags from "../components/topic-tags";
 import TopicThumbnail from "../components/topic-thumbnail";
 
-export default apiInitializer("1.39.0", (api) => {
+export default apiInitializer((api) => {
   api.renderInOutlet("discovery-below", CustomSidebar);
 
   api.registerValueTransformer("topic-list-item-mobile-layout", () => false);

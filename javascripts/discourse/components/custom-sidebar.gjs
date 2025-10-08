@@ -15,7 +15,6 @@ import { i18n } from "discourse-i18n";
 
 export default class CustomSidebar extends Component {
   @service currentUser;
-  @service site;
 
   @tracked userDetails;
   @tracked loading;
