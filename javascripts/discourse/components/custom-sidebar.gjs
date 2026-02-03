@@ -105,12 +105,12 @@ export default class CustomSidebar extends Component {
           </div>
         {{/unless}}
       </ConditionalLoadingSpinner>
-    </div>
 
-    {{#if this.currentUser}}
-      <a class="sidebar-link" href="/my/summary">
-        {{i18n (themePrefix "sidebar.full_profile")}}
-      </a>
-    {{/if}}
+      {{#if this.currentUser}}
+        <a class="sidebar-link" href="/my/summary">
+          {{i18n (themePrefix "sidebar.full_profile")}}
+        </a>
+      {{/if}}
+    </div>
   </template>
 }
