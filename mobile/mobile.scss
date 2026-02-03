@@ -127,6 +127,10 @@ tr {
   }
 }
 
+.category-list.with-topics .category-list-item {
+  border: none !important; // overrides specific style
+}
+
 // topic list
 
 // The mobile template is different

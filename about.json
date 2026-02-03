@@ -24,5 +24,8 @@
     ],
     "serialize_topic_excerpts": true
   },
+  "theme_site_settings": {
+    "enable_welcome_banner": false
+  },
   "screenshots": ["screenshots/light.png", "screenshots/dark.png"]
 }

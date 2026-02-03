@@ -24,7 +24,7 @@
       grid-area: alerts;
     }
 
-    .container:nth-of-type(2),
+    #main-container.container,
     .tag-info {
       grid-area: pins;
     }
@@ -42,13 +42,9 @@
       }
     }
 
-    .list-container + span {
+    .list-container + .dbook-sidebar {
       grid-area: sidebar;
-
-      .custom-sidebar-connector,
-      .dbook-sidebar {
-        display: block;
-      }
+      display: block;
 
       @media screen and (width <= 920px) {
         display: none;
@@ -93,6 +89,10 @@
       > .container:not(.list-container) + span {
         display: none;
       }
+    }
+
+    .welcome-banner {
+      display: none;
     }
 
     .latest-topic-list .table-heading,
@@ -525,6 +525,9 @@ body {
   padding: 1em;
   margin-bottom: 0.5em;
   color: var(--primary, $primary);
+  align-self: start;
+  position: sticky;
+  top: calc(var(--header-offset) + 1em);
 
   @include fb-background;
 
@@ -547,6 +550,7 @@ body {
   }
 
   .sign-up-button {
+    display: block;
     margin-top: 1em;
   }
 
@@ -599,6 +603,10 @@ body {
       font-size: 0.9em;
     }
   }
+
+  .user-badge {
+    margin-bottom: 0.25em;
+  }
 }
 
 // Topic
@@ -623,7 +631,27 @@ body {
 }
 
 .topic-map {
-  border-radius: 4px;
+  &.--op {
+    padding-left: 0;
+  }
+}
+
+.small-action {
+  &.time-gap {
+    .small-action-desc {
+      padding-left: 0;
+    }
+  }
+
+  .small-action-desc {
+    border: none;
+  }
+}
+
+.small-action.topic-post-visited
+  .topic-post-visited-line
+  .topic-post-visited-message {
+  background: var(--primary-low);
 }
 
 .topic-avatar {
@@ -1146,6 +1174,7 @@ body {
 
       .raw-link {
         display: block;
+        padding-left: 0;
       }
     }
 
@@ -1164,6 +1193,7 @@ body {
   }
 
   .topic-list-op {
+    margin-bottom: 1em;
     font-size: var(--font-down-1);
 
     > a {
@@ -1350,4 +1380,8 @@ section.tag-info {
 // chat
 .chat-messages-container {
   background: var(--secondary);
+}
+
+.topic-post-badges {
+  align-self: inherit;
 }
