@@ -18,7 +18,7 @@
   .navigation-topics,
   .categories-list,
   .tags-page,
-  body[class*="category-"]:not(.archetype-regular, .archetype-banner) {
+  body.navigation-category {
     // Structuring the main grid layout
     .container:first-of-type {
       grid-area: alerts;
