@@ -18,7 +18,7 @@
   .navigation-topics,
   .categories-list,
   .tags-page,
-  body[class*="category-"]:not(.archetype-regular, .archetype-banner) {
+  body.navigation-category {
     // Structuring the main grid layout
     .container:first-of-type {
       grid-area: alerts;
@@ -119,7 +119,8 @@
         top: 4.5em;
       }
 
-      #create-topic {
+      > #create-topic,
+      .d-combo-button {
         flex: 1 1 auto;
         order: 5;
         margin: 0;
@@ -303,15 +304,6 @@ body {
 
 .wrap {
   max-width: 1020px;
-}
-
-#create-topic {
-  background: var(--tertiary, $tertiary);
-  color: var(--secondary, $secondary);
-
-  .d-icon {
-    color: currentcolor;
-  }
 }
 
 .topic-list-main-link a.title,
